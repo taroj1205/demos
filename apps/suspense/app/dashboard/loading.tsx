@@ -3,7 +3,7 @@ export default function Loading() {
   // data is loading, such as a skeleton or spinner.
   return (
     <div className="flex items-center justify-center h-screen">
-      <div>Loading...</div>
+      <h1 className="text-2xl font-bold">Dashboard is loading...</h1>
     </div>
   );
 }
