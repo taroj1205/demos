@@ -5,7 +5,10 @@ import Link from "next/link";
 
 
 export default async function Dashboard() {
-  const data = await someFunc();
+  const {data, error} = await someFunc();
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
   return (
     <div>
       <h1 className="text-2xl font-bold">Dashboard</h1>
