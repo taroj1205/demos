@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { someFunc } from "@/utils";
 import { Slower } from "@/components/slower";
 import Link from "next/link";
+import { Client } from "./client";
 
 
 export default async function Dashboard() {
@@ -18,6 +19,7 @@ export default async function Dashboard() {
       <Suspense fallback={<div>Loading...</div>}>
         <Slower />
       </Suspense>
+      <Client/>
       <Link href="/" className="text-blue-500 underline hover:text-blue-600 font-bold text-2xl">Home</Link>
     </div>
   );
