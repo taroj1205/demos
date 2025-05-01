@@ -17,7 +17,7 @@ export const authenticateUser = async (email: string, password: string): Promise
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-  await sleep(3000);
+  await sleep(1000);
 
   if (user) {
     return { 
