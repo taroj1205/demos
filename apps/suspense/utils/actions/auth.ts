@@ -48,14 +48,13 @@ export async function login(prevState: FormState, formData: FormData): Promise<F
     try {
         const result = await authenticateUser(email, password);
 
-        if (result.success) {
-            console.log("Sucess!")
-            return { errors: {}, email, password };
-        } else {
+        if (!result.user) {
             return { errors: { root: 'Invalid email or password' }, email, password };
         }
     } catch (error) {
         console.log(error);
         return { errors: { root: 'An unexpected error occurred' }, email, password };
     }
+
+    redirect('/dashboard');
 }
