@@ -13,6 +13,12 @@ export const authenticateUser = async (email: string, password: string): Promise
 
   const user = validUsers.find(u => u.email === email && u.password === password);
 
+  function sleep(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  await sleep(3000);
+
   if (user) {
     return { 
       success: true, 
