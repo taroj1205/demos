@@ -4,6 +4,8 @@ import { Slower } from "@/components/slower";
 import Link from "next/link";
 import { Client } from "./client";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Dashboard() {
   const {data, error} = await someFunc();
   if (error) {
