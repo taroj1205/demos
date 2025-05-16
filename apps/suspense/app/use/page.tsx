@@ -3,8 +3,6 @@ import { Suspense } from 'react';
 import { Client } from '../dashboard/client';
 import Link from 'next/link';
 
-export const dynamic = 'force-dynamic';
-
 // Define the type for our data
 interface UserData {
   name: string;
