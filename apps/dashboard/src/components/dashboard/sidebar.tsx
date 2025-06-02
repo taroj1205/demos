@@ -79,7 +79,6 @@ export function Sidebar() {
                   pathname === item.href &&
                     "bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-50"
                 )}
-                prefetch={false}
               >
                 <item.icon className="h-4 w-4" />
                 {item.name}
@@ -126,7 +125,6 @@ export function MobileSidebar() {
                 pathname === item.href &&
                   "bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-50"
               )}
-              prefetch={false}
             >
               <item.icon className="h-4 w-4" />
               {item.name}
