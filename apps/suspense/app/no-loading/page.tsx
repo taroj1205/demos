@@ -4,8 +4,7 @@ import { Slower } from "@/components/slower";
 import Link from "next/link";
 import { Client } from "./client";
 
-// Force dynamic rendering
-export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic"; // Force dynamic rendering
 
 export default async function Dashboard() {
   const { data, error } = await someFunc();
@@ -28,7 +27,13 @@ export default async function Dashboard() {
         </header>
 
         <div className="space-y-6">
-          <Suspense>
+          <Suspense
+            fallback={
+              <div className="flex items-center justify-center py-8">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+              </div>
+            }
+          >
             <div className="bg-gray-50 p-4 rounded-lg">
               <pre className="text-sm text-gray-700 whitespace-pre-wrap">
                 {JSON.stringify(data, null, 2)}

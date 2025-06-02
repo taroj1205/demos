@@ -1,0 +1,29 @@
+.toastStack {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toastItem {
+  /* Marker class for stacking logic */
+}
+
+.toastStack:not(:hover) > .toastItem {
+  margin-bottom: -12px;
+  transition: margin-bottom 0.2s cubic-bezier(.4,0,.2,1), transform 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+.toastStack:not(:hover) > .toastItem:not(:last-child) {
+  /* Overlap effect for stacked toasts */
+  filter: brightness(0.97);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.toastStack:hover > .toastItem {
+  margin-bottom: 8px;
+  transition: margin-bottom 0.2s cubic-bezier(.4,0,.2,1), transform 0.2s cubic-bezier(.4,0,.2,1);
+} 
