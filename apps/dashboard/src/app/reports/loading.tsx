@@ -23,9 +23,9 @@ export default function ReportsLoading() {
         ))}
       </div>
 
-      <div className="grid gap-4 md:gap-8 lg:grid-cols-3">
+      <div className="grid gap-4 md:gap-8">
         {/* Reports Table Skeleton */}
-        <div className="lg:col-span-2">
+        <div>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle>Recent Reports</CardTitle>

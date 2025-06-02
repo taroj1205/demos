@@ -242,14 +242,14 @@ export default function ReportsPage() {
         <ReportsOverview />
       </Suspense>
 
-      <div className="grid gap-4 md:gap-8 grid-cols-1 xl:grid-cols-3">
-        <div className="xl:col-span-2">
+      <div className="grid gap-4 md:gap-8">
+        <div>
           <Suspense fallback={<ReportsTableSkeleton />}>
             <ReportsTable />
           </Suspense>
         </div>
 
-        <div className="xl:col-span-1">
+        <div>
           <Suspense fallback={<ReportTemplatesSkeleton />}>
             <ReportTemplates />
           </Suspense>
